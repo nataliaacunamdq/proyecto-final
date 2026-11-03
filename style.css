@@ -1,37 +1,143 @@
-*{
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-h1 {
-    font-size: 3rem;
-    color: blueviolet;
 }
 
-h2 {
-    font-size: 2rem;
-    color: blue;
-    font-size: 8rem;
-    font-weight: 800;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
 
-
+/* Encabezado */
 header {
+    background-color: #8fae49;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+header h3 {
+    color: #2e4010;
+    font-size: 0.9rem;
+}
+
+/* Enlaces del menú apilados uno arriba del otro */
+nav ul {
+    list-style: none;
+    margin-top: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 3rem;
-    color: brown;
-    background-color: aquamarine;
-    padding: 10px 20px;
-    width: 100vw;
+    gap: 10px;
+    padding: 0;
 }
-li{
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Imagen principal de Biodiversidad grande y adaptable */
+.banner-principal {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+.img-biodiversidad {
+    width: 100vw;
+    border-radius: 8px;
+    display: block;
+}/* Estilos para las páginas de detalle y listas con flechas */
+.contenido-detalle {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.contenido-detalle img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.texto-explicativo h2 {
+    color: #2e4010;
+    margin-bottom: 10px;
+}
+
+.texto-explicativo p {
+    line-height: 1.6;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.lista-flechas-css {
     list-style: none;
+    padding: 0;
 }
-a{
-    font-size: 1rem;
+
+.lista-flechas-css li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 22px; /* Espacio separado entre cada característica */
+    line-height: 1.6;
+    color: #333333;
 }
-img{
-    width: 100vw;
+
+.lista-flechas-css li::before {
+    content: "➔";
+    position: absolute;
+    left: 0;
+    color: #c94a29; /* Color de la flecha */
+    font-weight: bold;
 }
+/* Estilos para que la imagen principal se adapte al ancho completo en móviles */
+.banner-principal {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.img-biodiversidad {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Ajustes para el modo celular */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Mantiene todo alineado arriba */
+  align-items: stretch;
+}
+
+/* Contenedor principal de la imagen */
+.banner-principal {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
